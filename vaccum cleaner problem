@@ -1,0 +1,14 @@
+rooms = ['Dirty', 'Clean', 'Dirty']
+position = 0
+
+for _ in range(3):
+    print(f"Vacuum at room {position}, Room is {rooms[position]}")
+    if rooms[position] == 'Dirty':
+        print("Action: Clean")
+        rooms[position] = 'Clean'
+    else:
+        print("Action: No operation")
+    if position < 2:
+        print("Action: Move Right")
+        position += 1
+print("Final Room States:", rooms)
